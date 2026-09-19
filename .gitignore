@@ -1,0 +1,12 @@
+# Local originals and historical working notes are not website assets.
+/ChatGPT Image*.png
+/IScience-website-visual-report.md
+/docs/superpowers/
+/docs/mutation-ledger.md
+
+# Local artifacts and credentials must never be published.
+/_site/
+/node_modules/
+/.env
+/.env.*
+*.log
