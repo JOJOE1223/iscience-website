@@ -45,7 +45,7 @@ node tests/site-smoke.mjs
 
 Use the visible business name exactly as `IScience`. The supplied logo is the canonical brand asset and must not be stretched, recoloured or redesigned.
 
-`info@iscience.co.za` is currently shown as pending mailbox activation, so the local site does not publish a functioning `mailto:` CTA and does not include a fake contact form. Enable the normal email link only after the mailbox is confirmed operational.
+`admin@iscience.co.za` is the active business mailbox and is published as a functioning `mailto:` link on the Contact page. The site does not include a contact form.
 
 ## Future roadmap
 

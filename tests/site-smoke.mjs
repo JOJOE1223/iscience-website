@@ -26,7 +26,9 @@ const combined = pages.join('\n');
 
 assert.equal((combined.match(/\bIScience\b/g) ?? []).length >= 4, true, 'Each page must use exact IScience branding');
 assert.equal(combined.includes('href="#"'), false, 'Placeholder navigation links are not allowed');
-assert.equal(combined.includes('mailto:info@iscience.co.za'), false, 'Email must remain pending until activation is confirmed');
+assert.equal(pageByName.contact.includes('href="mailto:admin@iscience.co.za"'), true, 'Contact page must link to the active business mailbox');
+assert.equal(pageByName.contact.includes('info@iscience.co.za'), false, 'Contact page must not show the superseded mailbox');
+assert.equal(pageByName.contact.includes('pending mailbox activation'), false, 'Contact page must not show the active mailbox as pending');
 assert.equal(/revolutionary|world-leading|game-changing|guaranteed results|industry-leading/i.test(combined), false, 'Unsupported marketing claims found');
 assert.equal(/<img[^>]+src="(?:\.\.\/)?assets\/iscience-logo\.png"[^>]+alt="[^"]+"/i.test(combined), true, 'Pages must use the supplied logo with meaningful alt text');
 

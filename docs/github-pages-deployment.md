@@ -34,7 +34,7 @@ Official instructions: [GitHub custom domains](https://docs.github.com/en/pages/
 
 Preparation: existing site smoke check passed before publication. Live publishing and custom-domain certificate verification are pending at this preparation checkpoint. Publication is not complete until deployment and live checks are recorded below.
 
-The site's existing Contact page still says `info@iscience.co.za` is pending mailbox activation. This content is deliberately preserved; mailbox activation and contact-content changes are outside this deployment.
+The Contact page publishes `admin@iscience.co.za` as the active business mailbox. This content-only change does not alter any email DNS records or mailbox configuration.
 
 ## Mutation record and recovery
 
