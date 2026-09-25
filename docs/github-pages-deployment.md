@@ -32,13 +32,13 @@ Official instructions: [GitHub custom domains](https://docs.github.com/en/pages/
 
 ## Verification and rollout status
 
-Preparation: 26 calculator tests passed, zero failed; existing site smoke check passed. Live publishing and custom-domain certificate verification are pending at this preparation checkpoint. Publication is not complete until deployment and live checks are recorded below.
+Preparation: existing site smoke check passed before publication. Live publishing and custom-domain certificate verification are pending at this preparation checkpoint. Publication is not complete until deployment and live checks are recorded below.
 
 The site's existing Contact page still says `info@iscience.co.za` is pending mailbox activation. This content is deliberately preserved; mailbox activation and contact-content changes are outside this deployment.
 
 ## Mutation record and recovery
 
-Only deployment metadata and documentation were added/updated: `.gitignore`, `.nojekyll`, `CNAME`, `.github/workflows/pages.yml`, this file, and README deployment notes. Existing public HTML, CSS, JavaScript and logo are preserved byte-for-byte. Git was initialized locally; historical working notes and the original duplicate image are excluded from source publication.
+The Calculator page and its navigation, code, tests, and dedicated styles were removed at the CEO's request. The Pages workflow now validates and packages only the remaining Home, About, Contact, shared assets, and domain files. Email DNS records remain outside this deployment scope.
 
 Rollback after later updates: revert the offending commit and let the same workflow redeploy. For initial-publication rollback, disable Pages in repository Settings > Pages and have Truehost remove/revert only the five web DNS records above, preserving all email records. The original website source remains available locally and in the initial publication commit. Never leave a custom-domain DNS pointer to an unclaimed Pages site.
 

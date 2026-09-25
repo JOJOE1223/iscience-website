@@ -80,70 +80,6 @@ h3 { font-size: 1.3rem; }
 .footer-nav a { text-decoration: none; }
 .footer-nav a:hover { color: var(--cyan-300); }
 
-.calculator-hero { position: relative; overflow: hidden; padding: 5.5rem 0 4rem; background: radial-gradient(circle at 80% 18%, rgba(25,168,244,.2), transparent 34%), linear-gradient(145deg, var(--navy-900), #0a2038); }
-.calculator-hero::after { content: ""; position: absolute; width: 22rem; height: 22rem; right: -8rem; bottom: -13rem; border: 1px solid rgba(141,220,255,.2); border-radius: 50%; }
-.calculator-hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: 4rem; }
-.calculator-hero h1 { font-size: clamp(2.8rem, 6vw, 5.6rem); }
-.calculator-intro-note { position: relative; z-index: 1; padding: 1.5rem; border: 1px solid rgba(141,220,255,.28); background: rgba(5,11,21,.55); }
-.calculator-intro-note p { margin: .65rem 0 0; color: var(--muted); line-height: 1.65; }
-.note-label { color: var(--cyan-300); font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-.calculator-section { padding: 3.5rem 0 5rem; background: linear-gradient(180deg, var(--ice-100), #dceffc); color: var(--ink); }
-.calculator-shell { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(300px, .75fr); gap: 1.5rem; align-items: start; }
-.calculator-form { display: grid; gap: 1.5rem; }
-.calculator-panel { border: 1px solid rgba(18,111,174,.25); background: #f9fcff; box-shadow: 0 18px 44px rgba(5,22,39,.08); }
-.ingredients-panel, .costs-panel, .results-panel { padding: 1.5rem; }
-.panel-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.5rem; }
-.panel-heading h2 { font-size: clamp(1.6rem, 3vw, 2.35rem); }
-.panel-heading > p { max-width: 33rem; margin: 0; color: #416075; line-height: 1.6; }
-.compact-heading { align-items: center; }
-.ingredient-table-wrap { width: 100%; overflow-x: auto; }
-.ingredient-table { width: 100%; border-spacing: 0; border-collapse: collapse; table-layout: fixed; }
-.ingredient-table th { padding: .75rem .65rem; border-bottom: 2px solid var(--blue-700); color: #31566f; font-size: .72rem; letter-spacing: .06em; text-align: left; text-transform: uppercase; }
-.ingredient-table th:nth-child(1) { width: 28%; }
-.ingredient-table th:nth-child(2) { width: 16%; }
-.ingredient-table th:nth-child(3) { width: 19%; }
-.ingredient-table th:nth-child(4) { width: 25%; }
-.ingredient-table th:nth-child(5) { width: 12%; }
-.ingredient-table td { padding: .8rem .65rem; border-bottom: 1px solid rgba(18,111,174,.16); vertical-align: top; }
-.ingredient-table input, .field input { width: 100%; min-height: 44px; padding: .65rem .7rem; border: 1px solid #9ab5c9; border-radius: 0; background: #fff; color: var(--ink); }
-.ingredient-table input:hover, .field input:hover { border-color: var(--blue-700); }
-.ingredient-table input[aria-invalid="true"], .field input[aria-invalid="true"] { border-color: #a92f2f; background: #fff8f8; }
-.contribution-value { padding-top: 1.55rem !important; color: var(--blue-700); font-weight: 800; font-variant-numeric: tabular-nums; }
-.field-error { display: block; min-height: 1rem; margin-top: .3rem; color: #922c2c; font-size: .74rem; line-height: 1.35; }
-.remove-ingredient { min-height: 44px; padding: .55rem .65rem; border: 1px solid rgba(18,111,174,.3); background: transparent; color: #31566f; cursor: pointer; }
-.remove-ingredient:hover { border-color: #922c2c; color: #922c2c; }
-.calculator-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-top: 1.25rem; }
-.calculator-actions .button, .calculator-actions .text-button { min-height: 44px; cursor: pointer; }
-.button-on-light { border-color: rgba(18,111,174,.35); color: var(--blue-700); background: transparent; }
-.text-button { padding: .65rem .25rem; border: 0; border-bottom: 1px solid currentColor; background: transparent; color: #416075; }
-.inclusion-status { margin-top: 1.25rem; padding: .85rem 1rem; border-left: 3px solid var(--blue-700); background: #e4f3fd; color: #174e71; font-weight: 700; }
-.inclusion-status.is-warning { border-left-color: #b06613; background: #fff1dc; color: #75410c; }
-.inclusion-status.is-complete { border-left-color: #237657; background: #e5f5ee; color: #14543d; }
-.validation-summary { margin-bottom: 1.25rem; padding: 1rem; border-left: 3px solid #a92f2f; background: #fff0f0; color: #742222; }
-.validation-summary[hidden] { display: none; }
-.validation-summary ul { margin: .5rem 0 0; padding-left: 1.25rem; }
-.cost-input-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
-.field label { display: block; margin-bottom: .45rem; color: #31566f; font-size: .82rem; font-weight: 700; }
-.field-hint { display: block; margin-top: .4rem; color: #58758b; font-size: .75rem; line-height: 1.4; }
-.results-panel { position: sticky; top: 98px; background: var(--navy-800); color: var(--ice-100); border-color: #204a77; box-shadow: 0 24px 50px rgba(5,11,21,.2); }
-.results-panel .section-kicker { color: var(--cyan-300); }
-.cost-ledger { margin: 0; }
-.cost-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; align-items: baseline; padding: .8rem 0; border-bottom: 1px solid var(--line); }
-.cost-row dt { color: var(--muted); font-size: .82rem; line-height: 1.35; }
-.cost-row dd { margin: 0; color: #fff; font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
-.cost-row.is-total { margin-top: .4rem; padding: 1rem 0; border-bottom-color: rgba(141,220,255,.48); }
-.cost-row.is-total dt, .cost-row.is-total dd { color: var(--cyan-300); font-size: 1rem; }
-.cost-row.is-selling { margin: 1rem -1.5rem 0; padding: 1.15rem 1.5rem; border: 0; background: var(--cyan-300); }
-.cost-row.is-selling dt, .cost-row.is-selling dd { color: var(--navy-950); font-size: 1rem; }
-.cost-row.is-profit dd { color: #9ee9c9; }
-.cost-row.is-secondary { border-bottom: 0; }
-.cost-row.is-secondary dt, .cost-row.is-secondary dd { font-size: .76rem; }
-.margin-note { margin: 1rem 0 0; color: var(--muted); font-size: .76rem; line-height: 1.55; }
-.guardrail-section { padding: 0 0 5rem; background: linear-gradient(180deg, #dceffc, var(--ice-100)); color: var(--ink); }
-.guardrail { display: grid; grid-template-columns: .55fr 1.45fr; gap: 2.5rem; padding: 2rem; border: 1px solid rgba(18,111,174,.35); background: #f8fcff; }
-.guardrail h2 { font-size: clamp(1.7rem, 3vw, 2.8rem); }
-.guardrail p:last-child { margin: 0; color: #416075; line-height: 1.75; }
-
 @media (max-width: 760px) {
   .header-inner, .container { width: min(calc(100% - 1.5rem), var(--max-width)); }
   .header-inner { min-height: 68px; }
@@ -152,39 +88,12 @@ h3 { font-size: 1.3rem; }
   .site-nav.is-open { display: flex; }
   .site-nav a { padding: .8rem; }
   .hero-grid, .section-grid, .contact-panel { grid-template-columns: 1fr; gap: 2rem; }
-  .calculator-hero-grid, .calculator-shell, .guardrail { grid-template-columns: 1fr; gap: 1.5rem; }
-  .calculator-hero { padding: 4rem 0 3rem; }
-  .calculator-section { padding: 2rem 0 3rem; }
-  .results-panel { position: static; }
-  .panel-heading { align-items: flex-start; flex-direction: column; gap: .75rem; }
-  .cost-input-grid { grid-template-columns: 1fr; }
-  .ingredient-table-wrap { overflow: visible; }
-  .ingredient-table { display: block; }
-  .ingredient-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-  .ingredient-table tbody { display: grid; gap: 1rem; }
-  .ingredient-table tr { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem 1rem; padding: 1rem; border: 1px solid rgba(18,111,174,.25); background: #fff; }
-  .ingredient-table td { display: block; min-width: 0; padding: 0; border: 0; }
-  .ingredient-table td:first-child, .ingredient-table td:nth-child(4) { grid-column: 1 / -1; }
-  .ingredient-table td::before { content: attr(data-label); display: block; margin-bottom: .4rem; color: #31566f; font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
-  .contribution-value { padding-top: 0 !important; }
-  .ingredient-table td:last-child { display: flex; justify-content: flex-end; }
-  .ingredient-table td:last-child::before { display: none; }
-  .calculator-actions { align-items: stretch; flex-direction: column; }
-  .calculator-actions .button, .calculator-actions .text-button { width: 100%; }
-  .guardrail { padding: 1.5rem; }
   .hero-grid { min-height: auto; padding: 4rem 0; }
   .hero-logo { min-height: 210px; }
   .section { padding: 3.8rem 0; }
   .principles, .expertise-grid { grid-template-columns: 1fr; }
   .page-hero { padding: 5rem 0 3rem; }
   .footer-inner { align-items: flex-start; flex-direction: column; }
-}
-
-@media (max-width: 430px) {
-  .ingredients-panel, .costs-panel, .results-panel { padding: 1rem; }
-  .cost-row.is-selling { margin-left: -1rem; margin-right: -1rem; padding-left: 1rem; padding-right: 1rem; }
-  .ingredient-table tr { grid-template-columns: 1fr; }
-  .ingredient-table td:first-child, .ingredient-table td:nth-child(4) { grid-column: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
